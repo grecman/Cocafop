@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+/* ---------------------------------
+	TABLE START
+----------------------------------*/
+.tableData {
+	float: left;
+	width: 99.9%;
+}
+
+.rowOdd {
+	background: #FFFFFF; /* D7 */
+}
+
+.rowEven {
+	background: #ececec; /* D11 */
+}
+
+.tableColored .rowEven {
+	background: #ececec; /* D8 */
+}
+
+tr.rowSeparated th {
+	border-bottom: 1px solid #FFFFFF;
+	border-collapse: collapse;
+}
+
+.tableData td {
+	font: 12px Verdana, Geneva, Helvetica, sans-serif;
+	line-height: 18px;
+	padding: 1px 10px;
+}
+
+.tableData th {
+	font: bold 11px Verdana, Geneva, Helvetica, sans-serif;
+	line-height: 14px;
+	color: #000000;
+	background: #C3C3C3; /* D10 */
+	padding: 3px 10px;
+}
+
+th {
+	background-color: #c7c0b8;
+}
+
+th.superior {
+	color: #000000;
+	background: #dddddd; /* D9 */
+}
+
+.tableColored th {
+	background: #B7C0D2; /* D6 */
+}
+
+.tableColored th.superior {
+	background: #6F80A4; /* D5 */
+}
+
+.tableBordered,.tableBorderedCols,.tableBorderedLight {
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+}
+
+.tableBordered tr.rowSeparated th,.tableBorderedCols tr.rowSeparated th,.tableBorderedLight tr.rowSeparated th
+	{
+	border-bottom: 1px solid #dddddd;
+}
+
+.tableBordered th,.tableBorderedCols th {
+	border: 1px solid #dddddd;
+}
+
+.tableBordered tr {
+	background: #FFFFFF; /* D7 */
+	border-bottom: 1px solid #dddddd;
+}
+
+.tableBorderedCols td {
+	border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	/*border-bottom: 1px solid #000000;*/
+}
+
+.tableBordered td {
+	border: 1px solid #dddddd;
+}
+
+.tablePaging {
+	font-size: 11px;
+	color: #000000;
+	text-align: center;
+	font-weight: normal;
+	line-height: 17px;
+}
+
+.tablePaging a {
+	color: #1c481b; /* C4 */
+}
+
+.superior .tablePaging {
+	color: #FFFFFF;
+}
+
+.superior .tablePaging a {
+	color: #000000;
+}
+
+.tablePaging img {
+	vertical-align: -25%;
+}
+
+.tablePaging .tablePagingLeft {
+	float: left;
+	text-align: left;
+}
+
+.tablePaging .tablePagingRight {
+	float: right;
+	text-align: right;
+}
+
+.tablePaging form,.tablePaging select {
+	font-size: 11px;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: middle;
+}
+
+img.pagingHome,img.pagingLeft,img.pagingRight,img.pagingEnd {
+	width: 15px;
+	height: 16px;
+	margin: 0px;
+	border: 0px none;
+}
+
+img.pagingHome {
+	background: url("../../../../Images/sys_paging_home.gif") no-repeat 0px
+		0px;
+}
+
+a:hover img.pagingHome {
+	background: url("../../../../Images/sys_paging_home.gif") no-repeat
+		-15px 0px;
+}
+
+img.pagingLeft {
+	background: url("../../../../Images/sys_paging_left.gif") no-repeat 0px
+		0px;
+}
+
+a:hover img.pagingLeft {
+	background: url("../../../../Images/sys_paging_left.gif") no-repeat
+		-15px 0px;
+}
+
+img.pagingRight {
+	background: url("../../../../Images/sys_paging_right.gif") no-repeat 0px
+		0px;
+}
+
+a:hover img.pagingRight {
+	background: url("../../../../Images/sys_paging_right.gif") no-repeat
+		-15px 0px;
+}
+
+img.pagingEnd {
+	background: url("../../../../Images/sys_paging_end.gif") no-repeat 0px
+		0px;
+}
+
+a:hover img.pagingEnd {
+	background: url("../../../../Images/sys_paging_end.gif") no-repeat -15px
+		0px;
+}
+
+img.tableSortDown,img.tableSortUp {
+	width: 15px;
+	height: 8px;
+	margin: 0px;
+	border: 0px none;
+}
+
+img.tableSortDown {
+	background: url("../../../../Images/sys_table-sort-down1.gif") no-repeat
+		left top;
+}
+
+.superior img.tableSortDown {
+	background: url("../../../../Images/sys_table-sort-down2.gif") no-repeat
+		left top;
+}
+
+img.tableSortUp {
+	background: url("../../../../Images/sys_table-sort-up1.gif") no-repeat
+		left top;
+}
+
+.superior img.tableSortUp {
+	background: url("../../../../Images/sys_table-sort-up2.gif") no-repeat
+		left top;
+}
+
+img.tableSortOff {
+	background: transparent;
+	width: 0px;
+	height: 0px;
+	margin: 0px -1px 0px 0px;
+	border: 0px none;
+}
+
+.pageControl {
+	width: 195px;
+	margin: 20px 0px 0px 15px;
+	background: #FFFFFF;
+}
+
+.pageControlTopBorder,.pageControlBottomBorder {
+	position: relative;
+	height: 4px;
+	width: 4px;
+	font-size: 0px;
+	line-height: 0px;
+}
+
+.pageControlTopBorder {
+	background: url("../../../../Images/sys_page-control_lt.gif") no-repeat
+		left top;
+	margin: 0px 0px -2px 0px;
+	z-index: 5;
+}
+
+.pageControlBottomBorder {
+	background: url("../../../../Images/sys_page-control_lb.gif") no-repeat
+		left top;
+	margin: -2px 0px 0px 0px;
+	z-index: 5;
+}
+
+.pageControlMiddle {
+	background: #DDDDDD; /* C1 */
+	margin: 0px 0px 0px 2px;
+	position: relative;
+	padding: 10px 10px 10px 20px;
+	font-size: 11px;
+	line-height: 14px;
+	font-weight: normal;
+	color: #000000;
+	z-index: 4;
+}
+
+.pageControlMiddle a {
+	color: #1c481b; /* C4 */
+	text-decoration: none;
+}
+
+.pageControlMiddle a:hover {
+	text-decoration: underline;
+}
+
+.pageControlMiddle p {
+	font-size: 11px;
+	line-height: 14px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.pageControlMiddle .bullet {
+	left: -7px;
+	position: relative;
+	font-size: 11px;
+	font-weight: normal;
+	color: #1c481b; /* C4 */
+	line-height: 14px;
+	float: left;
+	height: 14px;
+	width: 10px;
+	display: block;
+	margin: 0px -10px 0px -3px;
+	padding: 0px;
+}
+/* ---------------------------------
+	TABLE END
+----------------------------------*/
+
+
+@media print {
+	.tableData table th {
+		background-color: #FFF;
+		border-bottom: #c8c9ca solid 1px;
+		height: 30px;
+		color: #000;
+		font-weight: bold;
+	}
+	.tableData table td {
+		background-color: #FFF;
+		border-bottom: #c8c9ca solid 1px;
+		height: 30px;
+	}
+	.tableData table {
+		background-color: #FFF;
+		border: #c8c9ca solid 1px;
+		padding: 15px;
+	}
+	.tableData form {
+		display: none;
+		visibility: hidden;
+	}
+}

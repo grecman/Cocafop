@@ -1,0 +1,13 @@
+<ivy-module version="2.0">
+	<info organisation="vwg.skoda.cocafop" module="Cocafop-Web" />
+	<dependencies>
+
+		<dependency org="org.hibernate" name="com.springsource.org.hibernate.ejb"
+			rev="4.1.0.Final" />
+		<dependency org="org.springframework" name="org.springframework.spring-library"
+			rev="3.1.2.RELEASE" />
+		<dependency org="org.apache.poi" name="poi" rev="3.8" />
+		<dependency org="jstl" name="jstl" rev="1.2" />
+
+	</dependencies>
+</ivy-module>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="CocafopService" />
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+
+	<bean class="vwg.skoda.cocafop.services.CocafopServiceImpl" id="cocafopService">
+		<property name="userRepository" ref="userRepository"></property>
+		<property name="plantRepository" ref="plantRepository"></property>
+		<property name="brandRepository" ref="brandRepository"></property>
+		<property name="permissionPlantRepository" ref="permissionPlantRepository"></property>
+		<property name="permissionBrandRepository" ref="permissionBrandRepository"></property>
+		<property name="exchangeRateRepository" ref="exchangeRateRepository"></property>
+		<property name="modelKeyRepository" ref="modelKeyRepository"></property>
+		<property name="localContentRepository" ref="localContentRepository"></property>
+		<property name="orderRepository" ref="orderRepository"></property>
+		<property name="mkOrderRepository" ref="mkOrderRepository"></property>
+		<property name="priceListRepository" ref="priceListRepository"></property>
+		<property name="bomRepository" ref="bomRepository"></property>
+		<property name="desRozpadRepository" ref="desRozpadRepository"></property>
+		<property name="priceListSkodaRepository" ref="priceListSkodaRepository"></property>
+		<property name="protokolRepository" ref="protokolRepository"></property>
+	</bean>
+
+	<bean class="vwg.skoda.cocafop.repositories.UserRepositoryJpa" id="userRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.PlantRepositoryJpa" id="plantRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.BrandRepositoryJpa" id="brandRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.PermissionPlantRepositoryJpa" id="permissionPlantRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.PermissionBrandRepositoryJpa" id="permissionBrandRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.ExchangeRateRepositoryJpa" id="exchangeRateRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.ModelKeyRepositoryJpa" id="modelKeyRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.LocalContentRepositoryJpa" id="localContentRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.OrderRepositoryJpa" id="orderRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.MkOrderRepositoryJpa" id="mkOrderRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.PriceListRepositoryJpa" id="priceListRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.BomRepositoryJpa" id="bomRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.DesRozpadRepositoryJpa" id="desRozpadRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.PriceListSkodaRepositoryJpa" id="priceListSkodaRepository"></bean>
+	<bean class="vwg.skoda.cocafop.repositories.ProtokolRepositoryJpa"  id="protokolRepository"></bean>
+	
+ 	<bean class="vwg.skoda.cocafop.services.LdapServiceImpl" id="ldapService">
+		<property name="ldapRepository" ref="ldapRepository"></property>
+	</bean>
+	
+	<bean class="vwg.skoda.cocafop.repositories.LdapRepository" id="ldapRepository"></bean>
+ 
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<context:component-scan base-package="vwg.skoda.cocafop.repositories" />
+	
+</beans>

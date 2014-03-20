@@ -1,0 +1,53 @@
+<project name="PredstavEar" default="ear">
+
+
+	<property name="CocafopService.jar" value="${java.io.tmpdir}/CocafopService.jar"/>
+	<property name="Cocafop.war" value="${java.io.tmpdir}/Cocafop.war"/>
+	
+	<property name="Cocafop.ear" value="//skoda.vwg/data/.Projects/IT/SAB/builds/COCAFOP/Cocafop.ear"/>
+	<property name="was.home" value="c:\Program Files\IBM\WebSphere\AppServer\"/>
+
+	<property name="wsadmin" value="C:\Program Files\IBM\WebSphere\AppServer\bin\wsadmin.bat"/>
+
+	<target name="ear">
+
+			
+		<eclipse.convertPath resourcepath="CocafopService" property="CocafopService.path"/>
+		<eclipse.convertPath resourcepath="CocafopWeb" property="CocafopWeb.path"/>
+		
+		
+		
+		<echo message="building: ${CocafopService.path}/bin"/>
+		<war update="yes" keepcompression="yes" destfile="${Cocafop.war}" webxml="./WebContent/WEB-INF/web.xml" >
+			
+			<fileset  dir="./WebContent"/>
+			
+			<classes>
+					<fileset dir="${CocafopService.path}/bin/" includes="**/*.*"/>
+			</classes>
+		</war>
+
+
+
+		<ear  duplicate="fail" destfile="${Cocafop.ear}" appxml="application.xml">
+			<file file="${Cocafop.war}"/>
+		</ear>
+
+		
+		
+	</target>
+
+
+	<target name="deploy" depends="ear">
+		<echo message="deploying file: ${Predstav.ear}"/>
+		<ant dir="../WasUtil" target="deploy" output="c:\temp\deploy.log">
+			<property name="application.name" value="PredstavEAR"/>
+			<property name="application.file" value="${Predstav.ear}"/>
+			<property name="was.user" value="dzcpb72"/>
+			<property name="was.password" value="password"/>
+			<property name="was.host" value="smbmda03"/>
+			<property name="was.port" value="8879"/>
+		</ant>
+	</target>
+
+</project>

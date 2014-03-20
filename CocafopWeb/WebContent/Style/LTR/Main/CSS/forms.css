@@ -1,0 +1,232 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* ---------------------------------
+	FORMS START
+----------------------------------*/
+
+form, input, textarea, select {
+        font-family: Verdana, Geneva,  Helvetica, sans-serif;
+        font-size: 12px;
+		
+}
+form  {
+        margin: 0px;
+        padding: 0px;
+		float:left;
+		width:99.9%;
+}
+.formStandard table, .formTwoCol table, .formThreeCol table {
+        background: #EFEFEF; /* D11 */
+        border: 2px solid #FFFFFF;
+		border-top:0px;
+}
+.formTitle{
+        background: #DDDDDD; /* C1 */
+}
+
+
+
+
+
+
+.formTitle td {
+        height: 28px;
+        border-bottom: 2px solid #FFFFFF;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 26px;
+        vertical-align: middle;
+        padding: 0px 0px 0px 13px;
+}
+
+.formTitle .formStep {
+        height: 28px;
+        font-weight: bold;
+        background: #8F9292 url("../images/sys_form_head-bg.png"/*tpa=http://intranet.skoda.vwg/b2eportal/HTML Protoyp/system/images/sys_form_head-bg.png*/) repeat-y left; /* C2 */
+        float: right;
+        margin: 0px;
+        padding: 0px 13px 0px 90px;
+        display: block;
+        color: #FFFFFF;
+}
+.formStandard .spacer td {
+        height: 8px;
+        font-size: 1px;
+        line-height: 1px;
+        margin: 0px;
+        padding: 0px;
+}
+.formStandard .formGroupSeparator td {
+        height: 16px;
+        font-size: 0px;
+        line-height: 0px;
+        padding: 0px;
+}
+.formStandard hr, .formTwoCol hr, .formThreeCol hr {
+        height: 2px;
+        background: #FFFFFF;
+        color: #FFFFFF;
+        margin: 0px;
+        padding: 0px;
+        border: 0px none;
+}
+.formColLeft, .formColRight, .formColMiddle {
+        padding: 7px 0px;
+        vertical-align: top;
+}
+.formColRight, .formColMiddle {
+        border-left: 2px solid #FFFFFF;
+}
+.formTwoCol label, .formThreeCol label {
+        font-size: 11px;
+        font-weight: bold;
+        white-space: nowrap;
+        padding: 0px;
+        line-height: 13px;
+        margin-bottom: 3px;
+        display: block;
+}
+.formStandard .formItemLabel {
+        width: 10%;
+        font-size: 11px;
+        font-weight: bold;
+        white-space: nowrap;
+        padding: 9px 10px 7px;
+        vertical-align: top;
+        line-height: 13px;
+}
+.formStandard .formItem {
+        padding: 7px 13px 7px 0px;
+}
+.formTwoCol .formItem, .formThreeCol .formItem {
+        padding: 7px 13px;
+}
+.inputTxtStd, .inputTxtHalf, .inputTxtShort{
+        padding-right: 0px;
+        padding-left: 5px;
+}
+select.inputTxtStd, select.inputTxtHalf, select.inputTxtShort{
+        padding-right: 0px;
+        padding-left: 0px;
+}
+textarea.inputTxtStd, textarea.inputTxtHalf, textarea.inputTxtShort{
+        padding-right: 0px;
+}
+
+.formStandard .inputTxtStd { width: 420px }
+.formStandard select.inputTxtStd { width: 435px }
+.formStandard textarea.inputTxtStd { width: 425px }
+.formStandard .inputTxtHalf { width: 195px }
+.formStandard .inputTxtHalfSpc { padding-right: 15px }
+.formStandard .inputTxtShort { width: 135px }
+.formStandard .inputRCh { margin-right: 3px }
+
+.mainAreaWide .formStandard .inputTxtStd { width: 620px }
+.mainAreaWide .formStandard select.inputTxtStd { width: 635px }
+.mainAreaWide .formStandard textarea.inputTxtStd { width: 625px }
+.mainAreaWide .formStandard .inputTxtHalf { width: 295px }
+.mainAreaWide .formStandard .inputTxtHalfSpc { padding-right: 15px }
+.mainAreaWide .formStandard .inputTxtShort { width: 185px }
+.mainAreaWide .formStandard .inputRCh { margin-right: 3px }
+
+.mainArea .layoutTwoCol .formStandard .inputTxtStd { width: 220px }
+.mainArea .layoutTwoCol .formStandard select.inputTxtStd { width: 235px }
+.mainArea .layoutTwoCol .formStandard textarea.inputTxtStd { width: 225px }
+.mainArea .layoutTwoCol .formStandard .inputTxtHalf { width: 95px }
+.mainArea .layoutTwoCol .formStandard .inputTxtHalfSpc { padding-right: 15px }
+.mainArea .layoutTwoCol .formStandard .inputTxtShort { width: 65px }
+.mainArea .layoutTwoCol .formStandard .inputRCh { margin-right: 3px }
+
+.mainAreaWide .layoutTwoCol .formStandard .inputTxtStd { width: 420px }
+.mainAreaWide .layoutTwoCol .formStandard select.inputTxtStd { width: 435px }
+.mainAreaWide .layoutTwoCol .formStandard textarea.inputTxtStd { width: 425px }
+.mainAreaWide .layoutTwoCol .formStandard .inputTxtHalf { width: 197px }
+.mainAreaWide .layoutTwoCol .formStandard .inputTxtHalfSpc { padding-right: 15px }
+.mainAreaWide .layoutTwoCol .formStandard .inputTxtShort { width: 135px }
+.mainAreaWide .layoutTwoCol .formStandard .inputRCh { margin-right: 3px }
+
+
+.formTwoCol .inputTxtStd { width: 325px }
+.formTwoCol select.inputTxtStd { width: 330px }
+.formTwoCol textarea.inputTxtStd { width: 325px }
+.formTwoCol .inputTxtHalf { width: 143px }
+.formTwoCol .inputTxtHalfSpc { padding-right: 15px }
+.formTwoCol .inputTxtShort { width: 135px }
+.formTwoCol .inputRCh { margin-right: 3px }
+
+.mainAreaWide .formTwoCol .inputTxtStd { width: 425px }
+.mainAreaWide .formTwoCol select.inputTxtStd { width: 430px }
+.mainAreaWide .formTwoCol textarea.inputTxtStd { width: 425px }
+.mainAreaWide .formTwoCol .inputTxtHalf { width: 195px }
+.mainAreaWide .formTwoCol .inputTxtHalfSpc { padding-right: 15px }
+.mainAreaWide .formTwoCol .inputTxtShort { width: 175px }
+.mainAreaWide .formTwoCol .inputRCh { margin-right: 3px }
+
+.mainAreaWide .layoutTwoCol .formTwoCol .inputTxtStd { width: 305px }
+.mainAreaWide .layoutTwoCol .formTwoCol select.inputTxtStd { width: 310px }
+.mainAreaWide .layoutTwoCol .formTwoCol textarea.inputTxtStd { width: 305px }
+.mainAreaWide .layoutTwoCol .formTwoCol .inputTxtHalf { width: 137px }
+.mainAreaWide .layoutTwoCol .formTwoCol .inputTxtHalfSpc { padding-right: 15px }
+.mainAreaWide .layoutTwoCol .formTwoCol .inputTxtShort { width: 125px }
+.mainAreaWide .layoutTwoCol .formTwoCol .inputRCh { margin-right: 3px }
+
+
+.formThreeCol .inputTxtStd { width: 275px }
+.formThreeCol select.inputTxtStd { width: 291px }
+.formThreeCol textarea.inputTxtStd { width: 281px }
+.formThreeCol .inputTxtHalf { width: 118px }
+.formThreeCol .inputTxtHalfSpc { padding-right: 15px }
+.formThreeCol .inputTxtShort { width: 95px }
+.formThreeCol .inputRCh { margin-right: 3px }
+
+.formFooter td {
+        height: 45px;
+        border-top: 2px solid #FFFFFF;
+        padding-right: 13px;
+        padding-left: 13px;
+        text-align: center;
+}
+.formFooter input {
+        height: 25px;
+        width: 75px;
+        padding: 0px 10px 0px 10px;
+        margin: 0px 7px 0px 8px;
+}
+.markObligatory {
+        color: #FF0000;
+        margin-left: 5px;
+        vertical-align: -15%;
+}
+
+
+/* ---------------------------------
+	FORMS END
+----------------------------------*/
+
+
+@media print {
+  
+ form table td {background-color:#FFF; border-bottom:#c8c9ca solid 1px;}
+
+form input, textarea, select {
+	border:hidden;
+	overflow:hidden;
+	height:auto;
+	}
+	
+input[type="button"] {
+	display:none;
+	visibility:hidden;
+	}	
+	
+input[type="submit"] {
+	display:none;
+	visibility:hidden;
+	}	 
+}
+
+
+
+

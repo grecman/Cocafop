@@ -1,0 +1,404 @@
+html, body
+{
+	background-color:#f0f0f0;
+	color: Black;
+	
+	width:100%;
+	
+	
+}
+/* background color table */
+.btRowContent
+{
+	background: #f0f0f0 url(../header.png) repeat-x top center;
+	width:100%;
+	
+}
+.btRowContentSubPage
+{
+	_background: #f0f0f0 url(../headerSubPage.png) repeat-x top center;
+	
+}
+.btRowLinks
+{
+	background-color: #F2F2F2;
+}
+
+/* ---------------------------------
+	H E A D E R
+----------------------------------*/
+.header
+{
+	background-color: transparent;
+	
+}
+.headerSubPage
+{
+	background-color: transparent;
+	height:82px;
+}
+
+.headerSubPage_silver
+{
+	background-color: transparent;
+	height:82px;
+	background:url(../headerSubPage_silver);
+	
+}
+.hlTop
+{
+	background: transparent url(../claim.png) no-repeat top left;
+}
+
+.hlTopSubPage
+{
+	background: transparent url(../logoSubPage.png) no-repeat top left;
+	height:48px;
+}
+/* top menu */
+.hlbMenu
+{
+	color: #555555;
+}
+.hlbMenuMain a, .hlbMenuMain a:active, .hlbMenuMain a:visited
+{
+	color: #555555;
+	border-right: solid 1px white;
+	border-left: solid 1px white;
+	border-top: solid 1px white;
+	background: transparent url(../menu_line.png) no-repeat right 8px;
+}
+.hlbMenuMain a:hover, 
+a.hlbMenuMainSelected, a.hlbMenuMainSelected:visited, a.hlbMenuMainSelected:active, a.hlbMenuMainSelected:hover
+{
+	color: #9f9f9f;
+	background-color: white;
+	background-image: none;
+	border-left: solid 1px #ebebeb;
+	border-top: solid 1px #ebebeb;
+	border-right: solid 1px #ebebeb;
+}
+a.hlbMenuLinkLast, a.hlbMenuLinkLast:visited, a.hlbMenuLinkLast:active, a.hlbMenuLinkLast:hover
+{
+	background-image: none !important;
+}
+/* top menu - second level */
+.hlbmslMain
+{
+	background-color: white;
+	border-left: solid 1px #ebebeb;
+	border-bottom: solid 1px #ebebeb;
+	border-right: solid 1px #ebebeb;
+	color: #555555;
+}
+.hlbmslMain UL LI a, .hlbmslMain UL LI a:visited, .hlbmslMain UL LI a:active
+{
+	color: black;
+	background: transparent url(../arrow_right.png) no-repeat 5px center;
+	border: none !important;
+}
+.hlbmslMain UL LI a:hover
+{
+	color: #4ba82e;
+	background: #ebebeb url(../arrow_right.png) no-repeat 5px center;
+	border: none !important;
+}
+/* search box */
+.hlbSearch
+{
+	border-top: solid 1px #D2D2D2;
+	border-left: solid 1px #D2D2D2;
+	border-right: solid 1px #D2D2D2;
+	border-bottom: solid 1px #D2D2D2;
+	background: white url(../search_bgr.png) no-repeat left center;	
+}
+.hlbSearchTextBox
+{
+	border: solid 0px white;
+	background-color: transparent;
+	color: #646464;
+}
+.hlbSearchButton
+{
+	background: #D3D3D3 url(../search_btn.png) no-repeat center center;
+	border: none;
+}
+/* right part */
+.hRight
+{
+	background: transparent url(../logo.png) no-repeat top left;
+}
+.hRightSubPage
+{
+	
+	height:38px;
+}
+/* language bar */
+.hrLanguages
+{
+	color: #a5a5a5;
+	
+}
+.hrLanguages a, .hrLanguages a:visited, .hrLanguages a:active
+{
+	color: #a5a5a5;
+	text-decoration: none;
+}
+.hrLanguages a:hover
+{
+	color: #299926;
+	text-decoration: underline;
+}
+.hrTextSelected
+{
+	color: #555555 !important;
+}
+
+
+/* ---------------------------------
+	M A I N
+----------------------------------*/
+.main
+{
+	background-color: #f0f0f0;
+	min-width:900px;
+
+}
+/* model menu */
+.mmMenuMain
+{
+	background-color: #4ba82e;
+	color: White;
+	
+}
+.mmMenuMain a, .mmMenuMain a:active, .mmMenuMain a:visited
+{
+	color: white;
+	border-left: solid 1px #4ba82e;
+	border-top: solid 1px #4ba82e;
+	border-right: solid 1px #4ba82e;
+	
+}
+.mmMenuMain a:hover, 
+a.mmMenuMainSelected, a.mmMenuMainSelected:visited, a.mmMenuMainSelected:active, a.mmMenuMainSelected:hover
+{
+	color: #4ba82e;
+	background: white url(../arrow_down.png) no-repeat right 8px;
+	border-left: solid 1px #ebebeb;
+	border-top: solid 1px #ebebeb;
+	border-right: solid 1px #ebebeb;
+
+}
+/* model menu - second level */
+.mmmSecondLevel
+{
+	background-color: white;
+	border-left: solid 1px #ebebeb;
+	border-bottom: solid 1px #ebebeb;
+	border-right: solid 1px #ebebeb;
+	color: #555555;
+}
+.mmslModel
+{
+	border-bottom: solid 1px black;
+}
+span.mmslModelHeader
+{
+	color: Black;
+}
+.mmslModelLinksRowIcon
+{
+	background: transparent url(../arrow_right.png) no-repeat top left;
+	background-position: 0% 4px;
+}
+.mmslModelLinksRowLink a, .mmslModelLinksRowLink a:visited, .mmslModelLinksRowLink a:active, .mmslModelLinksRowLink a:hover
+{
+	color: #555555 !important;
+	border: none !important;
+	background-color: transparent !important;
+	text-decoration: none;
+}
+.mmslModelLinksRowLink a:hover
+{
+	color: #299926 !important;
+	text-decoration: underline;
+}
+/* top part */
+.mtText
+{
+	color: White;
+}
+.mtText H1
+{
+	color: White;
+}
+.mtText a, .mtText a:visited, .mtText a:active, .mtText a:hover  
+{
+	color: white;
+	background: transparent url(../arrow_layer.png) no-repeat left 3px;
+}
+.mtText a span, .mtText a:visited span, .mtText a:active span
+{
+	color: White;
+	text-decoration: none;
+}
+.mtText a:hover span
+{
+	color: White;
+	text-decoration: underline;
+}
+/* bottom part */
+/* columns */
+.mbColumns
+{
+	background-color: #ececec;
+}
+.mbcArrowLeft
+{
+	background: transparent url(../arrow_left_big.png) no-repeat center center;
+}
+.mbcArrowRight
+{
+	background: transparent url(../arrow_right_big.png) no-repeat center center;
+}
+.mbcBottom
+{
+	color: #555555;
+}
+.mbcBottom a, .mbcBottom a:visited, .mbcBottom a:active, .mbcBottom a:hover
+{
+	color: black;
+	background: transparent url(../arrow_right_box.png) no-repeat center left;
+}
+.mbcBottom a span, .mbcBottom a:visited span, .mbcBottom a:active span
+{
+	color: black;
+	text-decoration: none;
+}
+.mbcBottom a:hover span
+{
+	color: #299926;
+	text-decoration: underline;
+}
+/* black boxes */
+.mbbbArrow
+{
+	background: transparent url(../arrow_up_blackbox.png) no-repeat bottom left;
+}
+.mbbbContent
+{
+	color: White;
+	background-color: Black;
+}
+.mbbbContent a, .mbbbContent a:visited, .mbbbContent a:active, .mbbbContent a:hover
+{
+	color: white;
+	background: transparent url(../arrow_right_white.png) no-repeat left 4px;
+}
+.mbbbContent a span, .mbbbContent a:visited span, .mbbbContent a:active span
+{
+	color: White;
+	text-decoration: none;
+}
+.mbbbContent a:hover span
+{
+	color: White;
+	text-decoration: underline;
+}
+
+
+
+/* ---------------------------------
+	Q U I C K  L I N K S
+----------------------------------*/
+.quickLinks
+{
+	background: #F2F2F2 url(../footer.png) no-repeat top right;
+}
+.qlHeader
+{
+	color: Black;
+}
+.qlBody a, .qlBody a:visited, .qlBody a:active, .qlBody a:hover
+{
+	color: #555555;
+	background: transparent url(../arrow_right.png) no-repeat center left;
+}
+.qlBody a span, .qlBody a:visited span, .qlBody a:active span
+{
+	color: #555555;
+	text-decoration: none;
+}
+.qlBody a:hover	span
+{
+	color: #299926;
+	text-decoration: underline;
+}
+
+
+
+/* ---------------------------------
+	F O O T E R
+----------------------------------*/
+.footer
+{
+	color: #555555;
+}
+.fLinks a, .fLinks a:visited, .fLinks a:active, .fLinks a:hover
+{
+	color: #555555;
+	text-decoration: none;
+}
+.fLinks a:hover
+{
+	color: #299926;
+	text-decoration: underline;
+}
+
+
+
+/* ------ SEARCH BOX -------------*/
+.hlbSearch .ms-sbrow
+{
+	background-color: transparent;
+}
+.hlbSearch .ms-sbcell
+{
+	border: none !important;
+}
+.hlbSearch .ms-sbplain
+{
+	border: solid 0px white !important;
+	background-color: transparent !important;
+	color: #646464 !important;
+}
+.hlbSearch .ms-sbgo input
+{
+	background: #D3D3D3 url(../search_btn.png) no-repeat center center;
+	border: none;
+}
+
+
+
+/* pmach: trask redefinice, doplnení atd pro konkrétní potreby manuálu */
+.hlbMenuMain a.justLink:hover
+{
+
+	color: #555555;
+	border-right: solid 1px white;
+	border-left: solid 1px white;
+	border-top: solid 1px white;
+	background: transparent url(../menu_line.png) no-repeat right 8px;
+}
+
+.mmMenuMain a.justLink:hover
+{
+	color: #4ba82e;
+	border-left: solid 1px #ebebeb;
+	border-top: solid 1px #ebebeb;
+	border-right: solid 1px #ebebeb;
+	border-bottom: solid 1px #ebebeb;
+	background-image:none;
+	
+}
+

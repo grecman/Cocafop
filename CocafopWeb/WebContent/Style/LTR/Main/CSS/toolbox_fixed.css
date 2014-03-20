@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ToolBox {
+	
+	float:left;
+	padding-top:10px;
+
+}
+.ToolBoxRight {
+	width:200px !important;
+	width:220px;
+	width:200px;
+	float:right;
+	padding:20px 10px 10px 10px;
+}
+.ToolBoxEdit {
+	width:300px !important;
+	float:left;
+	overflow:hidden;
+}
+.ToolBoxHeader {
+	width:200px;
+	height:20px !important;
+	height:21px;
+	height:20px;
+	float:left;
+	background-position:bottom center;
+	background-repeat:no-repeat;
+}
+.ToolBoxHeader1Selected, .ToolBoxHeader1, .ToolBoxHeader2Selected, .ToolBoxHeader2, .ToolBoxHeader3Selected, .ToolBoxHeader3 {
+	width:66px !important;
+	width:67px;
+	width:66px;
+	height:17px !important;
+	height:21px;
+	height:17px;
+	float:left;
+	overflow:hidden;
+	background-position:bottom left;
+	background-repeat:no-repeat;
+	cursor:pointer !important;
+	_cursor:hand;
+	text-align:center;
+	font-size:9px;
+	padding:4px 1px 0 0;
+	position:relative;
+	top:0px !important;
+	top:1px;
+}
+.ToolBoxHeader1Selected, .ToolBoxHeader1 {
+	width:67px !important;
+	width:68px;
+	width:67px;
+	padding-right:1px !important;
+}
+.ToolBoxHeader3Selected, .ToolBoxHeader3 {
+	width:65px !important;
+	padding-right:0px !important;
+}
+
+
+.ToolBoxPageFull {
+	width:880px;
+	float:left;
+	padding:10px 10px 10px 10px;
+	margin-top:-1px;
+	font-size:9px;
+	background-color:#fff;
+	border:#CCC solid 1px;
+	
+}
+
+.ToolBoxPage {
+	width:180px !important;
+	width:200px;
+	width:180px;
+	float:left;
+	padding:10px 10px 10px 10px;
+	font-size:9px;
+	background-position:bottom left;
+	background-repeat:no-repeat;
+}
+.ToolBoxFooter {
+	display:none;
+}
+
+.ToolBoxHeader {
+	border-bottom:solid 1px #C7CCD0;
+}
+
+
+
+
+.ToolBoxHeader1Selected {
+	background-image:url(../../../../Images/sharebox_icon_1a.gif);
+}
+.ToolBoxHeader1 {
+	background-image:url(../../../../Images/sharebox_icon_1b.gif);
+}
+.ToolBoxHeader2Selected {
+	background-image:url(../../../../Images/sharebox_icon_2a.gif);
+}
+.ToolBoxHeader2 {
+	background-image:url(../../../../Images/sharebox_icon_2b.gif);
+}
+.ToolBoxHeader3Selected {
+	background-image:url(../../../../Images/sharebox_icon_3a.gif);
+}
+.ToolBoxHeader3 {
+	background-image:url(../../../../Images/sharebox_icon_3b.gif);
+}
+.ToolBoxPage {
+	background-image:url(../../../../Images/sharebox_footer.gif);
+}
