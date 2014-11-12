@@ -65,7 +65,9 @@
 	<entry key="modelType">Model type</entry>	
 	<entry key="modelYear">Model year</entry>	
 	<entry key="month">Month</entry>
-	<entry key="noExchangeRate">No exchange rate</entry>
+	<entry key="noExchangeRate">No exchange rate. </entry>
+	<entry key="noPriceList">No price list (brand). </entry>
+	<entry key="noPriceListSkoda">No price list (skoda).</entry>
 	<entry key="options">Options</entry>
 	<entry key="orderDescription">Order description</entry>	
 	<entry key="ordersVolumes">Orders volumes</entry>

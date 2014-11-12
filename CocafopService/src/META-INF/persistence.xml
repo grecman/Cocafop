@@ -10,8 +10,10 @@
 		<!-- Hibernate ani aplikace tyto classy nepotrebuje, ale pokud je projekt JPA (coz ja potrebuji kvuli tvorbe ClassDiagramu) tak to tu musim mit  -->
 		<!-- vyhazuje to chybu, ze konkretni entita "is mapped, but is not included in any persistence unit" -->
 		<!-- Ale pri vytvareni conneksny se da nastavit, abz nebylo pozadovano nadefinovani techto trid !!! -->
-		<!-- 
+		
+		<class>vwg.skoda.cocafop.entities.Bom</class>
 		<class>vwg.skoda.cocafop.entities.Brand</class>
+		<class>vwg.skoda.cocafop.entities.DesRozpad</class>
 		<class>vwg.skoda.cocafop.entities.ExchangeRate</class>
 		<class>vwg.skoda.cocafop.entities.LocalContent</class>
 		<class>vwg.skoda.cocafop.entities.MkOrder</class>
@@ -20,13 +22,11 @@
 		<class>vwg.skoda.cocafop.entities.PermissionBrand</class>
 		<class>vwg.skoda.cocafop.entities.PermissionPlant</class>
 		<class>vwg.skoda.cocafop.entities.Plant</class>
-		<class>vwg.skoda.cocafop.entities.UserApl</class>
-		<class>vwg.skoda.cocafop.entities.Bom</class>
 		<class>vwg.skoda.cocafop.entities.PriceList</class>
-		<class>vwg.skoda.cocafop.entities.DesRozpad</class>
 		<class>vwg.skoda.cocafop.entities.PriceListSkoda</class>
 		<class>vwg.skoda.cocafop.entities.Protokol</class>
-			 -->
+		<class>vwg.skoda.cocafop.entities.UserApl</class>
+			 
 		<properties>
 			<property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />

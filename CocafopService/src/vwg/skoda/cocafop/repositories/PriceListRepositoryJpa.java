@@ -1,6 +1,5 @@
 package vwg.skoda.cocafop.repositories;
 
-
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
@@ -18,22 +17,41 @@ public class PriceListRepositoryJpa implements PriceListRepository {
 
 	@Override
 	public PriceList getOnePriceList(Integer rok, Integer mesic, String partNumber) {
-		// log.debug("\t\t###\t getOnePriceList(" + rok + ", " + mesic + ", " + partNumber + ")"); // moc ukecane! provadi se s kazdym dilem
-		return entityManager.createQuery("SELECT b FROM PriceList b WHERE b.rok=:rok AND b.mesic=:mesic AND b.partNumber=:dil", PriceList.class).setParameter("rok", rok).setParameter("mesic", mesic).setParameter("dil", partNumber).getSingleResult();
+		// log.debug("\t\t###\t getOnePriceList(" + rok + ", " + mesic + ", " +
+		// partNumber + ")"); // moc ukecane! provadi se s kazdym dilem
+		return entityManager.createQuery("SELECT b FROM PriceList b WHERE b.rok=:rok AND b.mesic=:mesic AND b.partNumber=:dil", PriceList.class).setParameter("rok", rok)
+				.setParameter("mesic", mesic).setParameter("dil", partNumber).getSingleResult();
 	}
 
 	@Override
 	public Boolean existPartNumberInPriceList(Integer rok, Integer mesic, String partNumber) {
-		//log.debug("\t###\t existPartNumber(" +   rok+", "+ mesic+", "+ partNumber + ")");  // moc ukecane !!!
-		
+		// log.debug("\t###\t existPartNumber(" + rok+", "+ mesic+", "+
+		// partNumber + ")"); // moc ukecane !!!
+
 		try {
 			@SuppressWarnings("unused")
 			String nalezenaPartNumber = null;
-			nalezenaPartNumber = entityManager.createQuery("SELECT b.partNumber FROM PriceList b WHERE b.rok=:rok AND b.mesic=:mesic AND b.partNumber=:dil", String.class).setParameter("rok", rok).setParameter("mesic", mesic).setParameter("dil", partNumber).getSingleResult(); 
-			// log.debug("\t\t###\t PartNumber " + nalezenaPartNumber+" existuje v GZ38T_PRICELIST"); // moc ukecane !!!
+			nalezenaPartNumber = entityManager.createQuery("SELECT b.partNumber FROM PriceList b WHERE b.rok=:rok AND b.mesic=:mesic AND b.partNumber=:dil", String.class)
+					.setParameter("rok", rok).setParameter("mesic", mesic).setParameter("dil", partNumber).getSingleResult();
+			// log.debug("\t\t###\t PartNumber " +
+			// nalezenaPartNumber+" existuje v GZ38T_PRICELIST"); // moc ukecane
+			// !!!
 			return true;
 		} catch (NoResultException e) {
-			// log.debug("\t\t###\t Dil neni v GZ38T_PriceList ... chycena vyjimka: "+e);  // moc ukecane !!!
+			// log.debug("\t\t###\t Dil neni v GZ38T_PriceList ... chycena vyjimka: "+e);
+			// // moc ukecane !!!
+			return false;
+		}
+	}
+
+	@Override
+	public Boolean existPriceList(Integer rok, Integer mesic) {
+		log.debug("\t###\t existPriceList(" + rok + ", " + mesic + ")");
+		int nalezenCenik = entityManager.createQuery("SELECT b.partNumber FROM PriceList b WHERE b.rok=:rok AND b.mesic=:mesic ", String.class).setParameter("rok", rok)
+				.setParameter("mesic", mesic).getFirstResult();
+		if (nalezenCenik >= 1) {
+			return true;
+		} else {
 			return false;
 		}
 	}
@@ -41,8 +59,7 @@ public class PriceListRepositoryJpa implements PriceListRepository {
 	@Override
 	public void setPriceList(PriceList priceList) {
 		log.debug("\t###\t setPriceList(" + priceList + ")");
-		priceList = entityManager.merge(priceList);		
+		priceList = entityManager.merge(priceList);
 	}
-	
-		
+
 }

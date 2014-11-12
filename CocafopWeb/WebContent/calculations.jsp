@@ -34,6 +34,11 @@
 		<DIV
 			style="background-color: #dfd9d1; padding-left: 10px; padding-top: 10px; height: 40px;">
 			<TABLE width="100%" style="table-layout: fixed;">
+				<col width="150px" />
+				<col width="190px" />
+				<col width="150px" />
+				<col width="210px" />
+				<col width="*" />
 				<TR>
 					<TD><form:form commandName="modelFilter"
 							action="${pageContext.servletContext.contextPath}/srv/calculations/choosePermissionBrand/">
@@ -100,6 +105,12 @@
 					<TD style="color: red;">
 						<c:if test="${exchangeRateNotExists}">
 								<b><f:message>noExchangeRate</f:message></b>
+						</c:if>
+						<c:if test="${noPriceList}">
+								<b><f:message>noPriceList</f:message></b>
+						</c:if>
+						<c:if test="${noPriceListSkoda}">
+								<b><f:message>noPriceListSkoda</f:message></b>
 						</c:if>
 					</TD>	
 				</TR>

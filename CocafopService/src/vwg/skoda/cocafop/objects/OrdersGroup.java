@@ -52,16 +52,12 @@ public class OrdersGroup {
 		this.options = options;
 	}
 
-
 	public Long getCount() {
 		return count;
 	}
 
-
 	public void setCount(Long count) {
 		this.count = count;
 	}
-
-
 	
 }

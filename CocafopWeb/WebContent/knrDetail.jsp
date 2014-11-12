@@ -40,7 +40,7 @@
 				<TD style="padding-left: 50px;"><f:message>brand</f:message></TD>
 				<TD bgcolor="WHITE">${mko.modelKey.brand.brandMark}</TD>
 				<TD style="padding-left: 50px;"><f:message>year</f:message> / <f:message>month</f:message></TD>
-				<TD bgcolor="WHITE">${oneOrder.rok} / ${oneOrder.mesic}</TD>
+				<TD bgcolor="WHITE">${oneOrder.rok}/ ${oneOrder.mesic}</TD>
 				<TD />
 				<TD />
 			</TR>
@@ -132,16 +132,13 @@
 				<TD />
 			</TR>
 		</TABLE>
-		<TABLE width="94%" style="table-layout: fixed;">
-			<TR>
-				<TD><f:message>prDescription</f:message></TD>
-			</TR>
-			<TR>
-				<TD bgcolor="WHITE" style="word-wrap: break-word;"><font
-					size="4px" face="Courier New">${oneOrder.prDescription}</font></TD>
-			</TR>
 
-		</TABLE>
+		<DIV style="padding-left: 3px; padding-top: 3px;">
+			<f:message>prDescription</f:message>
+			<BR />
+			<TEXTAREA rows="9" cols="100" 
+				style="resize:horizontal; background-color: white; font-size: 16px;">${oneOrder.prDescription}</TEXTAREA>
+		</DIV>
 		<BR />
 		<TABLE width="100%" style="table-layout: fixed;">
 			<TR>
@@ -172,7 +169,7 @@
 		</TABLE>
 
 		<div>
-		<BR />
+			<BR />
 			<form:form commandName="modelFilter"
 				action="${pageContext.servletContext.contextPath}/srv/calculations/showMkOrders/${mko.modelKey.brand.plant.id}/${mko.modelKey.brand.brandMark}/${mko.modelKey.rok}?month=${mko.mesic}">
 				<input type="submit" value="Back" />

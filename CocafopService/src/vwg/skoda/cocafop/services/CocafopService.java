@@ -119,11 +119,13 @@ public interface CocafopService {
 	// PriceList
 	PriceList getOnePriceList(Integer rok, Integer mesic, String partNumber);	
 	Boolean existPartNumberInPriceList(Integer rok, Integer mesic, String partNumber);
+	Boolean existPriceList(Integer rok, Integer mesic);
 	void setPriceList (PriceList priceList);
 	
 	// PriceListSkoda
 	PriceListSkoda getOnePriceListSkoda(Integer rok, Integer mesic, String partNumber);	
 	Boolean existPartNumberInPriceListSkoda(Integer rok, Integer mesic, String partNumber);
+	Boolean existPriceListSkoda(Integer rok, Integer mesic);
 	void setPriceListSkoda (PriceListSkoda priceListSkoda);
 	
 	// Protokol

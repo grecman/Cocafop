@@ -538,6 +538,11 @@ public class CocafopServiceImpl implements CocafopService {
 	}	
 
 	@Override
+	public Boolean existPriceList(Integer rok, Integer mesic) {
+		return priceListRepository.existPriceList(rok, mesic);
+	}
+
+	@Override
 	@Transactional
 	public void setPriceList(PriceList priceList) {
 		priceListRepository.setPriceList(priceList);		
@@ -552,6 +557,12 @@ public class CocafopServiceImpl implements CocafopService {
 	public Boolean existPartNumberInPriceListSkoda(Integer rok, Integer mesic, String partNumber) {
 		return priceListSkodaRepository.existPartNumberInPriceListSkoda(rok, mesic, partNumber);
 	}
+	
+	@Override
+	public Boolean existPriceListSkoda(Integer rok, Integer mesic) {
+		return priceListSkodaRepository.existPriceListSkoda(rok, mesic);
+	}
+
 
 	@Override
 	public void setPriceListSkoda(PriceListSkoda priceListSkoda) {
@@ -569,6 +580,7 @@ public class CocafopServiceImpl implements CocafopService {
 	public void addProtokol(Protokol protokol) {
 		protokolRepository.addProtokol(protokol);		
 	}
+
 
 
 }

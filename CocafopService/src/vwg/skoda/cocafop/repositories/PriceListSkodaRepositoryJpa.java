@@ -38,10 +38,23 @@ public class PriceListSkodaRepositoryJpa implements PriceListSkodaRepository {
 	}
 
 	@Override
+	public Boolean existPriceListSkoda(Integer rok, Integer mesic) {
+		log.debug("\t###\t existPriceListSkoda(" +   rok+", "+ mesic+ ")"); 
+		int nalezenCenik = entityManager.createQuery("SELECT b.partNumber FROM PriceListSkoda b WHERE b.rok=:rok AND b.mesic=:mesic ", String.class).setParameter("rok", rok)
+				.setParameter("mesic", mesic).getFirstResult();
+		if (nalezenCenik >= 1) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	@Override
 	public void setPriceListSkoda(PriceListSkoda priceListSkoda) {
 		log.debug("\t###\t setPriceListSkoda(" + priceListSkoda + ")");
 		priceListSkoda = entityManager.merge(priceListSkoda);		
 	}
+
 
 	
 }

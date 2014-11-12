@@ -7,4 +7,5 @@ public interface PriceListSkodaRepository {
 	PriceListSkoda getOnePriceListSkoda(Integer rok, Integer mesic, String partNumber);	
 	Boolean existPartNumberInPriceListSkoda(Integer rok, Integer mesic, String partNumber);
 	void setPriceListSkoda (PriceListSkoda priceListSkoda);
+	Boolean existPriceListSkoda(Integer rok, Integer mesic);
 }

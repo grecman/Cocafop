@@ -216,12 +216,17 @@ public class CalculationsController {
 		req.getSession().setAttribute("pricePlantFromFilter", null);
 		req.getSession().setAttribute("pricePlantToFilter", null);
 
-
-		ExchangeRate exRate = service.getOneExchangeRate(plantId, rok, modelFilter.getMonth());
-		if (exRate==null) {
+		if (service.getOneExchangeRate(plantId, rok, modelFilter.getMonth())==null) {
 			model.addAttribute("exchangeRateNotExists", true);			
 		}
 		
+		if (!service.existPriceList(rok, modelFilter.getMonth())){
+			model.addAttribute("noPriceList", true);		
+		}
+		
+		if (!service.existPriceListSkoda(rok, modelFilter.getMonth())){
+			model.addAttribute("noPriceListSkoda", true);		
+		}		
 		
 		Plant p = service.getOnePlant(plantId);
 		Brand b = service.getOneBrand(plantId, brandMark);
