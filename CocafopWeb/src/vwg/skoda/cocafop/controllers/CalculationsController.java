@@ -41,6 +41,7 @@ import vwg.skoda.cocafop.services.CocafopService;
 @RequestMapping("/calculations")
 public class CalculationsController {
 
+	
 	static Logger log = Logger.getLogger(CalculationsController.class);
 
 	@Autowired

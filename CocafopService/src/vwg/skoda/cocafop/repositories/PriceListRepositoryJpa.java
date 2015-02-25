@@ -61,5 +61,4 @@ public class PriceListRepositoryJpa implements PriceListRepository {
 		log.debug("\t###\t setPriceList(" + priceList + ")");
 		priceList = entityManager.merge(priceList);
 	}
-
 }
